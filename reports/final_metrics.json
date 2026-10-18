@@ -1,0 +1,574 @@
+{
+  "flag_rate_by_type": {
+    "Multifamily Housing": {
+      "global_sigma": 0.082,
+      "per_type_sigma": 0.11,
+      "p90_rule": 0.092,
+      "n": 19654
+    },
+    "Office": {
+      "global_sigma": 0.135,
+      "per_type_sigma": 0.085,
+      "p90_rule": 0.088,
+      "n": 2231
+    },
+    "K-12 School": {
+      "global_sigma": 0.058,
+      "per_type_sigma": 0.057,
+      "p90_rule": 0.054,
+      "n": 1782
+    },
+    "Hotel": {
+      "global_sigma": 0.11,
+      "per_type_sigma": 0.087,
+      "p90_rule": 0.083,
+      "n": 663
+    },
+    "Non-Refrigerated Warehouse": {
+      "global_sigma": 0.204,
+      "per_type_sigma": 0.039,
+      "p90_rule": 0.052,
+      "n": 382
+    },
+    "Manufacturing/Industrial Plant": {
+      "global_sigma": 0.286,
+      "per_type_sigma": 0.125,
+      "p90_rule": 0.146,
+      "n": 343
+    },
+    "Self-Storage Facility": {
+      "global_sigma": 0.199,
+      "per_type_sigma": 0.089,
+      "p90_rule": 0.124,
+      "n": 291
+    },
+    "Mixed Use Property": {
+      "global_sigma": 0.204,
+      "per_type_sigma": 0.06,
+      "p90_rule": 0.084,
+      "n": 285
+    },
+    "Retail Store": {
+      "global_sigma": 0.215,
+      "per_type_sigma": 0.108,
+      "p90_rule": 0.097,
+      "n": 279
+    },
+    "Worship Facility": {
+      "global_sigma": 0.294,
+      "per_type_sigma": 0.111,
+      "p90_rule": 0.167,
+      "n": 180
+    }
+  },
+  "flag_rate_spread_sd": {
+    "global_sigma": 0.08043130152809823,
+    "per_type_sigma": 0.027701058593334035
+  },
+  "type_scaling_table_top": {
+    "Multifamily Housing": {
+      "n": 38336.0,
+      "center": -0.008,
+      "sigma": 0.234
+    },
+    "Office": {
+      "n": 4464.0,
+      "center": 0.006,
+      "sigma": 0.358
+    },
+    "K-12 School": {
+      "n": 3481.0,
+      "center": 0.009,
+      "sigma": 0.272
+    },
+    "Hotel": {
+      "n": 1221.0,
+      "center": 0.004,
+      "sigma": 0.304
+    },
+    "Non-Refrigerated Warehouse": {
+      "n": 777.0,
+      "center": 0.006,
+      "sigma": 0.619
+    },
+    "Manufacturing/Industrial Plant": {
+      "n": 667.0,
+      "center": -0.005,
+      "sigma": 0.688
+    },
+    "Self-Storage Facility": {
+      "n": 478.0,
+      "center": -0.045,
+      "sigma": 0.499
+    },
+    "Mixed Use Property": {
+      "n": 450.0,
+      "center": -0.013,
+      "sigma": 0.556
+    },
+    "Retail Store": {
+      "n": 539.0,
+      "center": 0.018,
+      "sigma": 0.498
+    },
+    "Worship Facility": {
+      "n": 354.0,
+      "center": 0.003,
+      "sigma": 0.553
+    }
+  },
+  "proxy_label_counts": {
+    "plausibility_fail": 1775,
+    "yoy_shift_gt3x": 816,
+    "extreme_es_score": 4791,
+    "any_proxy": 6620,
+    "any_excl_plausibility": 5305,
+    "pool": 29916
+  },
+  "benchmark": {
+    "any_proxy": [
+      {
+        "method": "P90 rule (EUI / type P90)",
+        "pr_auc": 0.3045,
+        "base_rate": 0.2213,
+        "precision@5%": 0.6745,
+        "recall@5%": 0.1524,
+        "precision@10%": 0.4609,
+        "recall@10%": 0.2083
+      },
+      {
+        "method": "P10/P90 rule (two-sided)",
+        "pr_auc": 0.6511,
+        "base_rate": 0.2213,
+        "precision@5%": 0.8964,
+        "recall@5%": 0.2026,
+        "precision@10%": 0.8409,
+        "recall@10%": 0.3801
+      },
+      {
+        "method": "EUI / national median",
+        "pr_auc": 0.3095,
+        "base_rate": 0.2213,
+        "precision@5%": 0.6063,
+        "recall@5%": 0.137,
+        "precision@10%": 0.5765,
+        "recall@10%": 0.2606
+      },
+      {
+        "method": "LightGBM |resid| (global sigma)",
+        "pr_auc": 0.5842,
+        "base_rate": 0.2213,
+        "precision@5%": 0.7874,
+        "recall@5%": 0.1779,
+        "precision@10%": 0.6721,
+        "recall@10%": 0.3038
+      },
+      {
+        "method": "LightGBM |resid| (per-type sigma)",
+        "pr_auc": 0.6197,
+        "base_rate": 0.2213,
+        "precision@5%": 0.8342,
+        "recall@5%": 0.1885,
+        "precision@10%": 0.7447,
+        "recall@10%": 0.3366
+      },
+      {
+        "method": "Isolation Forest",
+        "pr_auc": 0.3241,
+        "base_rate": 0.2213,
+        "precision@5%": 0.3817,
+        "recall@5%": 0.0863,
+        "precision@10%": 0.3626,
+        "recall@10%": 0.1639
+      },
+      {
+        "method": "One-Class SVM",
+        "pr_auc": 0.4467,
+        "base_rate": 0.2213,
+        "precision@5%": 0.6918,
+        "recall@5%": 0.1563,
+        "precision@10%": 0.5658,
+        "recall@10%": 0.2557
+      }
+    ],
+    "any_excl_plausibility": [
+      {
+        "method": "P90 rule (EUI / type P90)",
+        "pr_auc": 0.2105,
+        "base_rate": 0.1773,
+        "precision@5%": 0.5201,
+        "recall@5%": 0.1467,
+        "precision@10%": 0.3556,
+        "recall@10%": 0.2006
+      },
+      {
+        "method": "P10/P90 rule (two-sided)",
+        "pr_auc": 0.5341,
+        "base_rate": 0.1773,
+        "precision@5%": 0.7253,
+        "recall@5%": 0.2045,
+        "precision@10%": 0.7162,
+        "recall@10%": 0.404
+      },
+      {
+        "method": "EUI / national median",
+        "pr_auc": 0.1898,
+        "base_rate": 0.1773,
+        "precision@5%": 0.3837,
+        "recall@5%": 0.1082,
+        "precision@10%": 0.4265,
+        "recall@10%": 0.2405
+      },
+      {
+        "method": "LightGBM |resid| (global sigma)",
+        "pr_auc": 0.4244,
+        "base_rate": 0.1773,
+        "precision@5%": 0.5414,
+        "recall@5%": 0.1527,
+        "precision@10%": 0.5037,
+        "recall@10%": 0.2841
+      },
+      {
+        "method": "LightGBM |resid| (per-type sigma)",
+        "pr_auc": 0.4908,
+        "base_rate": 0.1773,
+        "precision@5%": 0.6344,
+        "recall@5%": 0.1789,
+        "precision@10%": 0.6076,
+        "recall@10%": 0.3427
+      },
+      {
+        "method": "Isolation Forest",
+        "pr_auc": 0.242,
+        "base_rate": 0.1773,
+        "precision@5%": 0.2721,
+        "recall@5%": 0.0767,
+        "precision@10%": 0.2564,
+        "recall@10%": 0.1446
+      },
+      {
+        "method": "One-Class SVM",
+        "pr_auc": 0.253,
+        "base_rate": 0.1773,
+        "precision@5%": 0.3536,
+        "recall@5%": 0.0997,
+        "precision@10%": 0.3155,
+        "recall@10%": 0.1779
+      }
+    ],
+    "plausibility_fail": [
+      {
+        "method": "P90 rule (EUI / type P90)",
+        "pr_auc": 0.1684,
+        "base_rate": 0.0593,
+        "precision@5%": 0.2099,
+        "recall@5%": 0.1769,
+        "precision@10%": 0.1377,
+        "recall@10%": 0.2321
+      },
+      {
+        "method": "P10/P90 rule (two-sided)",
+        "pr_auc": 0.3775,
+        "base_rate": 0.0593,
+        "precision@5%": 0.3837,
+        "recall@5%": 0.3234,
+        "precision@10%": 0.2423,
+        "recall@10%": 0.4085
+      },
+      {
+        "method": "EUI / national median",
+        "pr_auc": 0.215,
+        "base_rate": 0.0593,
+        "precision@5%": 0.2787,
+        "recall@5%": 0.2349,
+        "precision@10%": 0.1842,
+        "recall@10%": 0.3104
+      },
+      {
+        "method": "LightGBM |resid| (global sigma)",
+        "pr_auc": 0.4428,
+        "base_rate": 0.0593,
+        "precision@5%": 0.4706,
+        "recall@5%": 0.3966,
+        "precision@10%": 0.2924,
+        "recall@10%": 0.493
+      },
+      {
+        "method": "LightGBM |resid| (per-type sigma)",
+        "pr_auc": 0.3665,
+        "base_rate": 0.0593,
+        "precision@5%": 0.4071,
+        "recall@5%": 0.3431,
+        "precision@10%": 0.255,
+        "recall@10%": 0.4299
+      },
+      {
+        "method": "Isolation Forest",
+        "pr_auc": 0.154,
+        "base_rate": 0.0593,
+        "precision@5%": 0.1999,
+        "recall@5%": 0.1685,
+        "precision@10%": 0.1788,
+        "recall@10%": 0.3014
+      },
+      {
+        "method": "One-Class SVM",
+        "pr_auc": 0.4811,
+        "base_rate": 0.0593,
+        "precision@5%": 0.5448,
+        "recall@5%": 0.4592,
+        "precision@10%": 0.3777,
+        "recall@10%": 0.6366
+      }
+    ],
+    "yoy_shift_gt3x": [
+      {
+        "method": "P90 rule (EUI / type P90)",
+        "pr_auc": 0.0445,
+        "base_rate": 0.0273,
+        "precision@5%": 0.0816,
+        "recall@5%": 0.1495,
+        "precision@10%": 0.0511,
+        "recall@10%": 0.1875
+      },
+      {
+        "method": "P10/P90 rule (two-sided)",
+        "pr_auc": 0.1034,
+        "base_rate": 0.0273,
+        "precision@5%": 0.1638,
+        "recall@5%": 0.3002,
+        "precision@10%": 0.1183,
+        "recall@10%": 0.4338
+      },
+      {
+        "method": "EUI / national median",
+        "pr_auc": 0.0344,
+        "base_rate": 0.0273,
+        "precision@5%": 0.0675,
+        "recall@5%": 0.1238,
+        "precision@10%": 0.0468,
+        "recall@10%": 0.1716
+      },
+      {
+        "method": "LightGBM |resid| (global sigma)",
+        "pr_auc": 0.0968,
+        "base_rate": 0.0273,
+        "precision@5%": 0.1604,
+        "recall@5%": 0.2941,
+        "precision@10%": 0.1056,
+        "recall@10%": 0.3873
+      },
+      {
+        "method": "LightGBM |resid| (per-type sigma)",
+        "pr_auc": 0.0972,
+        "base_rate": 0.0273,
+        "precision@5%": 0.1537,
+        "recall@5%": 0.2819,
+        "precision@10%": 0.1003,
+        "recall@10%": 0.3676
+      },
+      {
+        "method": "Isolation Forest",
+        "pr_auc": 0.0481,
+        "base_rate": 0.0273,
+        "precision@5%": 0.0635,
+        "recall@5%": 0.1164,
+        "precision@10%": 0.0545,
+        "recall@10%": 0.1998
+      },
+      {
+        "method": "One-Class SVM",
+        "pr_auc": 0.0668,
+        "base_rate": 0.0273,
+        "precision@5%": 0.1176,
+        "recall@5%": 0.2157,
+        "precision@10%": 0.0832,
+        "recall@10%": 0.3051
+      }
+    ],
+    "extreme_es_score": [
+      {
+        "method": "P90 rule (EUI / type P90)",
+        "pr_auc": 0.1881,
+        "base_rate": 0.1601,
+        "precision@5%": 0.4806,
+        "recall@5%": 0.1501,
+        "precision@10%": 0.3265,
+        "recall@10%": 0.2039
+      },
+      {
+        "method": "P10/P90 rule (two-sided)",
+        "pr_auc": 0.5063,
+        "base_rate": 0.1601,
+        "precision@5%": 0.6671,
+        "recall@5%": 0.2083,
+        "precision@10%": 0.6761,
+        "recall@10%": 0.4223
+      },
+      {
+        "method": "EUI / national median",
+        "pr_auc": 0.1711,
+        "base_rate": 0.1601,
+        "precision@5%": 0.3516,
+        "recall@5%": 0.1098,
+        "precision@10%": 0.4031,
+        "recall@10%": 0.2517
+      },
+      {
+        "method": "LightGBM |resid| (global sigma)",
+        "pr_auc": 0.3865,
+        "base_rate": 0.1601,
+        "precision@5%": 0.4639,
+        "recall@5%": 0.1449,
+        "precision@10%": 0.4515,
+        "recall@10%": 0.282
+      },
+      {
+        "method": "LightGBM |resid| (per-type sigma)",
+        "pr_auc": 0.4598,
+        "base_rate": 0.1601,
+        "precision@5%": 0.5702,
+        "recall@5%": 0.178,
+        "precision@10%": 0.5642,
+        "recall@10%": 0.3523
+      },
+      {
+        "method": "Isolation Forest",
+        "pr_auc": 0.2154,
+        "base_rate": 0.1601,
+        "precision@5%": 0.2299,
+        "recall@5%": 0.0718,
+        "precision@10%": 0.2229,
+        "recall@10%": 0.1392
+      },
+      {
+        "method": "One-Class SVM",
+        "pr_auc": 0.2177,
+        "base_rate": 0.1601,
+        "precision@5%": 0.2828,
+        "recall@5%": 0.0883,
+        "precision@10%": 0.2657,
+        "recall@10%": 0.1659
+      }
+    ]
+  },
+  "agreement_spearman": {
+    "P10/P90 rule": {
+      "P10/P90 rule": 1.0,
+      "LGBM per-type": 0.397,
+      "Isolation Forest": 0.204,
+      "OC-SVM": 0.231
+    },
+    "LGBM per-type": {
+      "P10/P90 rule": 0.397,
+      "LGBM per-type": 1.0,
+      "Isolation Forest": 0.157,
+      "OC-SVM": 0.149
+    },
+    "Isolation Forest": {
+      "P10/P90 rule": 0.204,
+      "LGBM per-type": 0.157,
+      "Isolation Forest": 1.0,
+      "OC-SVM": 0.773
+    },
+    "OC-SVM": {
+      "P10/P90 rule": 0.231,
+      "LGBM per-type": 0.149,
+      "Isolation Forest": 0.773,
+      "OC-SVM": 1.0
+    }
+  },
+  "agreement_top10_jaccard": {
+    "P10/P90 rule": {
+      "P10/P90 rule": 1.0,
+      "LGBM per-type": 0.309,
+      "Isolation Forest": 0.127,
+      "OC-SVM": 0.165
+    },
+    "LGBM per-type": {
+      "P10/P90 rule": 0.309,
+      "LGBM per-type": 1.0,
+      "Isolation Forest": 0.087,
+      "OC-SVM": 0.135
+    },
+    "Isolation Forest": {
+      "P10/P90 rule": 0.127,
+      "LGBM per-type": 0.087,
+      "Isolation Forest": 1.0,
+      "OC-SVM": 0.515
+    },
+    "OC-SVM": {
+      "P10/P90 rule": 0.165,
+      "LGBM per-type": 0.135,
+      "Isolation Forest": 0.515,
+      "OC-SVM": 1.0
+    }
+  },
+  "stability_lightgbm": {
+    "mean_spearman": 0.9708024757708168,
+    "min_spearman": 0.9702512717160242,
+    "mean_top10_jaccard": 0.8878811682966596,
+    "min_top10_jaccard": 0.8835379288637079
+  },
+  "stability_iforest": {
+    "mean_spearman": 0.9968711263732931,
+    "min_spearman": 0.9964792636011144,
+    "mean_top10_jaccard": 0.8734002130016212,
+    "min_top10_jaccard": 0.8503401360544217
+  },
+  "shap_global_mean_abs": {
+    "log_nat_median_eui": 0.1892,
+    "share_elec": 0.1129,
+    "prop_type": 0.083,
+    "building_age": 0.0468,
+    "share_gas": 0.0425,
+    "borough": 0.0352,
+    "log_gfa": 0.0331,
+    "occupancy": 0.0138,
+    "share_steam": 0.0127,
+    "share_oil": 0.0113,
+    "default_values": 0.0093,
+    "estimated_energy": 0.0035,
+    "n_buildings": 0.0029,
+    "share_other": 0.0
+  },
+  "audit_groups": {
+    "top": 25,
+    "mid": 25
+  },
+  "thresholds": {
+    "lgbm_pertype_top10": 1.4817010494836698,
+    "iforest_top10": 0.5130998641608676
+  },
+  "regression_eval_2024": {
+    "property_type_median": {
+      "rmse_log": 0.5796586161536196,
+      "r2_log": 0.09336236082216409,
+      "rmse_eui": 50.618582423565236,
+      "mape_eui": 0.5751099258286932
+    },
+    "linear_regression": {
+      "rmse_log": 0.4592994362922907,
+      "r2_log": 0.43077891559999526,
+      "rmse_eui": 46.807400717936964,
+      "mape_eui": 0.37869363437718223
+    },
+    "lightgbm": {
+      "rmse_log": 0.3927503586988643,
+      "r2_log": 0.5837805852393082,
+      "rmse_eui": 42.50547672427114,
+      "mape_eui": 0.2933838570134567
+    }
+  },
+  "lgbm_best_params": {
+    "model__colsample_bytree": 0.6603900324858679,
+    "model__learning_rate": 0.04424740635198105,
+    "model__max_depth": 8,
+    "model__min_child_samples": 12,
+    "model__n_estimators": 297,
+    "model__num_leaves": 73,
+    "model__subsample": 0.6880964190262193,
+    "model__subsample_freq": 1
+  },
+  "lgbm_cv_rmse_log": 0.40610766044407737
+}

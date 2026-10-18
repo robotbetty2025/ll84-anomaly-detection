@@ -1,0 +1,59 @@
+{
+  "features": [
+    "prop_type",
+    "borough",
+    "log_gfa",
+    "building_age",
+    "n_buildings",
+    "occupancy",
+    "log_nat_median_eui",
+    "share_elec",
+    "share_gas",
+    "share_steam",
+    "share_oil",
+    "share_other",
+    "default_values",
+    "estimated_energy",
+    "log_site_eui"
+  ],
+  "pool_size": 29916,
+  "iforest_stability_by_trees": {
+    "50": {
+      "mean_spearman": 0.9492005681565105,
+      "min_spearman": 0.9217274877191487,
+      "mean_top10_jaccard": 0.6065798685757458,
+      "min_top10_jaccard": 0.52692013268691
+    },
+    "100": {
+      "mean_spearman": 0.9756114558737515,
+      "min_spearman": 0.9673446386531818,
+      "mean_top10_jaccard": 0.7130795843880302,
+      "min_top10_jaccard": 0.6553250345781466
+    },
+    "200": {
+      "mean_spearman": 0.9859265696974762,
+      "min_spearman": 0.9824417122850255,
+      "mean_top10_jaccard": 0.7628778471705095,
+      "min_top10_jaccard": 0.7284806470248412
+    },
+    "400": {
+      "mean_spearman": 0.9934724962515098,
+      "min_spearman": 0.9916533697330219,
+      "mean_top10_jaccard": 0.8295890365451253,
+      "min_top10_jaccard": 0.8062179293691518
+    },
+    "800": {
+      "mean_spearman": 0.9968711263732931,
+      "min_spearman": 0.9964792636011144,
+      "mean_top10_jaccard": 0.8734002130016212,
+      "min_top10_jaccard": 0.8503401360544217
+    }
+  },
+  "iforest_trees_chosen": 800,
+  "iforest_stability_final": {
+    "mean_spearman": 0.9968711263732931,
+    "min_spearman": 0.9964792636011144,
+    "mean_top10_jaccard": 0.8734002130016212,
+    "min_top10_jaccard": 0.8503401360544217
+  }
+}

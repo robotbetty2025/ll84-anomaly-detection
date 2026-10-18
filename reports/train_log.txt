@@ -1,0 +1,2 @@
+train 55033 test 28184 | dropped sparse: {'weekly_hours': 0.856}
+Fitting 5 folds for each of 12 candidates, totalling 60 fits

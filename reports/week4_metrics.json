@@ -1,0 +1,234 @@
+{
+  "n_train": 55033,
+  "n_test": 28184,
+  "n_test_seen_types": 28141,
+  "train_buildings": 30996,
+  "test_buildings_also_in_train_pct": 0.8193301163780868,
+  "dropped_sparse_features": {
+    "weekly_hours": 0.856
+  },
+  "features_used": [
+    "prop_type",
+    "borough",
+    "log_gfa",
+    "building_age",
+    "n_buildings",
+    "occupancy",
+    "log_nat_median_eui",
+    "share_elec",
+    "share_gas",
+    "share_steam",
+    "share_oil",
+    "share_other",
+    "default_values",
+    "estimated_energy"
+  ],
+  "baseline_flag_rate_train": 0.1000127196409427,
+  "baseline_flag_rate_test": 0.08983333925588999,
+  "ref_type_median": {
+    "rmse_log": 0.5796586161536196,
+    "r2_log": 0.09336236082216409,
+    "rmse_eui": 50.618582423565236,
+    "mape_eui": 0.5751099258286932
+  },
+  "ref_linear_regression": {
+    "rmse_log": 0.4592994362922907,
+    "r2_log": 0.43077891559999526,
+    "rmse_eui": 46.807400717936964,
+    "mape_eui": 0.37869363437718223
+  },
+  "lgbm_best_params": {
+    "model__colsample_bytree": 0.6603900324858679,
+    "model__learning_rate": 0.04424740635198105,
+    "model__max_depth": 8,
+    "model__min_child_samples": 12,
+    "model__n_estimators": 297,
+    "model__num_leaves": 73,
+    "model__subsample": 0.6880964190262193,
+    "model__subsample_freq": 1
+  },
+  "lgbm_cv_rmse_log": 0.40610766044407737,
+  "lgbm_search_candidates": {
+    "0": 0.409509526829956,
+    "1": 0.4084993467202224,
+    "2": 0.41239240406844335,
+    "3": 0.42012463305244696,
+    "4": 0.40914408333039853,
+    "5": 0.4085337359042545,
+    "6": 0.4202768754092057,
+    "7": 0.4120919864569158,
+    "8": 0.40963332388935736,
+    "9": 0.4091076961913811,
+    "10": 0.4097037303340462,
+    "11": 0.41086684934361734,
+    "12": 0.41633082429670515,
+    "13": 0.409236829208658,
+    "14": 0.41289980578008567,
+    "15": 0.40710229355070293,
+    "16": 0.4076198622364153,
+    "17": 0.4092140881750749,
+    "18": 0.4093878998001904,
+    "19": 0.4088906775721569,
+    "20": 0.411109368258791,
+    "21": 0.4171908045016224,
+    "22": 0.40789333265773153,
+    "23": 0.4127714052531486,
+    "24": 0.4082717006833089,
+    "25": 0.4110639327927171,
+    "26": 0.4105509863863409,
+    "27": 0.4085728007088164,
+    "28": 0.4132565382259565,
+    "29": 0.41169733113532325,
+    "30": 0.40610766044407737,
+    "31": 0.4155601613967715,
+    "32": 0.40689165843858055,
+    "33": 0.40666737137054254,
+    "34": 0.41410899420119246,
+    "35": 0.419536138219078,
+    "36": 0.4130558136279861,
+    "37": 0.4111925551777821,
+    "38": 0.4067366460989078,
+    "39": 0.4063264920684463
+  },
+  "residual_sigma_log": 0.406139039113017,
+  "lgbm_oof_train": {
+    "rmse_log": 0.4061394045671664,
+    "r2_log": 0.546711234137486,
+    "rmse_eui": 43.13320946155364,
+    "mape_eui": 0.30231308717028643
+  },
+  "lgbm_test_2024": {
+    "rmse_log": 0.3927503586988643,
+    "r2_log": 0.5837805852393082,
+    "rmse_eui": 42.50547672427114,
+    "mape_eui": 0.2933838570134567
+  },
+  "flag_agreement": {
+    "baseline_flags": 2528,
+    "lgbm_flags": 2815,
+    "both": 1413,
+    "jaccard": 0.35954198473282445,
+    "spearman_baseline_vs_lgbm_rank": 0.6426557060950377
+  },
+  "pct_abs_std_resid_gt_3": 0.016168579652464377,
+  "residual_by_type_2024": {
+    "Hotel": {
+      "count": 663,
+      "mean": 0.034,
+      "std": 0.87
+    },
+    "K-12 School": {
+      "count": 1782,
+      "mean": -0.147,
+      "std": 0.817
+    },
+    "Manufacturing/Industrial Plant": {
+      "count": 343,
+      "mean": 0.186,
+      "std": 2.046
+    },
+    "Mixed Use Property": {
+      "count": 285,
+      "mean": -0.168,
+      "std": 1.461
+    },
+    "Multifamily Housing": {
+      "count": 19654,
+      "mean": 0.003,
+      "std": 0.848
+    },
+    "Non-Refrigerated Warehouse": {
+      "count": 382,
+      "mean": -0.17,
+      "std": 1.501
+    },
+    "Office": {
+      "count": 2231,
+      "mean": -0.039,
+      "std": 1.118
+    },
+    "Retail Store": {
+      "count": 279,
+      "mean": 0.074,
+      "std": 1.414
+    },
+    "Self-Storage Facility": {
+      "count": 291,
+      "mean": 0.054,
+      "std": 1.473
+    },
+    "Worship Facility": {
+      "count": 180,
+      "mean": 0.218,
+      "std": 1.29
+    }
+  },
+  "flag_rate_by_type_2024": {
+    "Hotel": {
+      "baseline": 0.083,
+      "lgbm": 0.11,
+      "n": 663
+    },
+    "K-12 School": {
+      "baseline": 0.054,
+      "lgbm": 0.058,
+      "n": 1782
+    },
+    "Manufacturing/Industrial Plant": {
+      "baseline": 0.146,
+      "lgbm": 0.286,
+      "n": 343
+    },
+    "Mixed Use Property": {
+      "baseline": 0.084,
+      "lgbm": 0.204,
+      "n": 285
+    },
+    "Multifamily Housing": {
+      "baseline": 0.092,
+      "lgbm": 0.082,
+      "n": 19654
+    },
+    "Non-Refrigerated Warehouse": {
+      "baseline": 0.052,
+      "lgbm": 0.204,
+      "n": 382
+    },
+    "Office": {
+      "baseline": 0.088,
+      "lgbm": 0.135,
+      "n": 2231
+    },
+    "Retail Store": {
+      "baseline": 0.097,
+      "lgbm": 0.215,
+      "n": 279
+    },
+    "Self-Storage Facility": {
+      "baseline": 0.124,
+      "lgbm": 0.199,
+      "n": 291
+    },
+    "Worship Facility": {
+      "baseline": 0.167,
+      "lgbm": 0.294,
+      "n": 180
+    }
+  },
+  "feature_importance_gain_pct": {
+    "log_nat_median_eui": 39.38,
+    "share_elec": 16.96,
+    "prop_type": 15.14,
+    "building_age": 7.36,
+    "log_gfa": 6.73,
+    "share_gas": 6.21,
+    "occupancy": 2.18,
+    "borough": 2.05,
+    "share_oil": 1.17,
+    "share_steam": 1.14,
+    "n_buildings": 0.74,
+    "default_values": 0.52,
+    "estimated_energy": 0.42,
+    "share_other": 0.0
+  }
+}

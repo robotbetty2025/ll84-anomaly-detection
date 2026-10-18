@@ -1,0 +1,13 @@
+__pycache__/
+.ipynb_checkpoints/
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.joblib
+.venv/
+.DS_Store
+
+# deployed app needs its model and data artifacts
+!app/data/*.parquet
+!app/data/*.joblib

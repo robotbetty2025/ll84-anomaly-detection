@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "top": {
+      "Plausible Anomaly": 6,
+      "Data Error": 17,
+      "Normal": 2
+    },
+    "mid": {
+      "Plausible Anomaly": 1,
+      "Data Error": 3,
+      "Normal": 21
+    }
+  },
+  "n_top": 25,
+  "n_mid": 25,
+  "precision_top_plausible_anomaly": 0.24,
+  "precision_top_any_non_normal": 0.92,
+  "data_error_share_top": 0.68,
+  "mid_plausible_anomaly_share": 0.04,
+  "mid_any_non_normal": 0.16,
+  "fisher_exact_p_top_vs_mid_non_normal": 7.131958507326283e-08,
+  "odds_ratio": 60.375
+}

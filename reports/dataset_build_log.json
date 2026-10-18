@@ -1,0 +1,59 @@
+{
+  "raw_rows": 103259,
+  "raw_by_year": {
+    "2022": 30485,
+    "2023": 33684,
+    "2024": 39090
+  },
+  "duplicate_property_years_removed": 775,
+  "status_counts": {
+    "model_ready": 83217,
+    "out_of_scope": 14268,
+    "dq_anomaly": 4999
+  },
+  "status_by_year": {
+    "2022": {
+      "dq_anomaly": 1343,
+      "model_ready": 26956,
+      "out_of_scope": 2033
+    },
+    "2023": {
+      "dq_anomaly": 1792,
+      "model_ready": 28077,
+      "out_of_scope": 3193
+    },
+    "2024": {
+      "dq_anomaly": 1864,
+      "model_ready": 28184,
+      "out_of_scope": 9042
+    }
+  },
+  "scope_reasons": "{('dq_anomaly', 'gfa_below_25k_or_invalid'): 3427, ('dq_anomaly', 'site_eui_out_of_range'): 1552, ('dq_anomaly', 'year_built_invalid'): 20, ('out_of_scope', 'excluded_type'): 727, ('out_of_scope', 'missing_property_type'): 70, ('out_of_scope', 'missing_required_energy'): 12015, ('out_of_scope', 'not_existing_building'): 325, ('out_of_scope', 'type_under_50_buildings'): 1131}",
+  "model_ready_by_year": {
+    "2022": 26956,
+    "2023": 28077,
+    "2024": 28184
+  },
+  "model_ready_buildings": 36088,
+  "property_types_in_model": 43,
+  "feature_missing_gt40pct_in_model_ready": {
+    "weekly_hours": 0.847
+  },
+  "feature_missing_frac_all": {
+    "log_gfa": 0.0,
+    "building_age": 0.0,
+    "n_buildings": 0.0,
+    "occupancy": 0.0,
+    "log_nat_median_eui": 0.014,
+    "share_elec": 0.0,
+    "share_gas": 0.0,
+    "share_steam": 0.0,
+    "share_oil": 0.0,
+    "share_other": 0.0,
+    "weekly_hours": 0.847,
+    "default_values": 0.0,
+    "estimated_energy": 0.0,
+    "prop_type": 0.0,
+    "borough": 0.03
+  }
+}
