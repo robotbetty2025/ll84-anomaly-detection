@@ -1,5 +1,7 @@
 # Building Energy Benchmarking Anomaly Detection (NYC LL84)
 
+Live app: https://julie-bounds-energy-anomaly.streamlit.app | Code: https://github.com/robotbetty2025/ll84-anomaly-detection
+
 DTSC 691 capstone. Ranks commercial and multifamily buildings by how far their site EUI departs from what
 comparable buildings are expected to use, instead of using a static percentile cutoff.
 

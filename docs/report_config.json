@@ -3,7 +3,7 @@
   "mentor": "Jasmeet Bhatia",
   "course": "DTSC 691: Applied Data Science",
   "submission_date": "October 18, 2026",
-  "app_url": "[ADD STREAMLIT APP URL AFTER DEPLOYMENT]",
-  "repo_url": "[ADD GITHUB REPOSITORY URL]",
+  "app_url": "https://julie-bounds-energy-anomaly.streamlit.app",
+  "repo_url": "https://github.com/robotbetty2025/ll84-anomaly-detection",
   "video_url": "[ADD VIDEO LINK]"
 }
