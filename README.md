@@ -5,11 +5,9 @@ Live app: https://julie-bounds-energy-anomaly.streamlit.app | Code: https://gith
 DTSC 691 capstone. Ranks commercial and multifamily buildings by how far their site EUI departs from what
 comparable buildings are expected to use, instead of using a static percentile cutoff.
 
-## Status (Oct 4, 2026)
-Done: data pipeline, EDA, rule-based baselines, tuned LightGBM residual model with per-type scaling, Isolation Forest, One-Class SVM,
-proxy-label benchmark, seed stability, SHAP, blind audit workbook, 4-page Streamlit app (smoke-tested).
-Next: complete the 50-building audit (`reports/expert_audit_50_buildings.xlsx`), fill in `app/content.py`, deploy, final report and video.
-See `docs/week5_progress_summary.md` for results and caveats.
+## Status (Oct 18, 2026)
+
+Done: data pipeline, EDA, rule-based baselines, tuned LightGBM residual model with per-type scaling, Isolation Forest, One-Class SVM, proxy-label benchmark, seed stability, SHAP, 50-building blind expert audit, deployed 4-page Streamlit app, and the final report (`docs/Final_Project_Overview.pdf`). See `docs/AI_USAGE_LOG.md` for how AI assistance was used.
 
 ## Data
 * NYC LL84 benchmarking disclosures, calendar years 2022 to 2024 (103,259 property-year rows, 265 columns).
